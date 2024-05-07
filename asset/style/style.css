@@ -1,6 +1,10 @@
-.body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+    background-color: #5C4009;
 }
 .img-product{
-    height: 500px;
+    height: 450px;
 }
