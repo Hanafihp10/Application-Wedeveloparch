@@ -23,42 +23,123 @@
         <main>
             <div class="scrolled-offset mt-6">
                 <div class="container mb-5 py-5">
-                    <div class="d-flex flex-lg-row justify-content-center mb-5 pb-5">
-                        <div class="row gap-5 d-flex flex-lg-row flex-column mt-5">
-                            <div class="col-lg-4 text-lg-start text-center mt-lg-5 pt-lg-5 aos-initf aos-animate" data-aos="fade-right" data-aos-duration="1500">
-                                <h1><strong>Tonton, Pahami,<br>Tumbuh Bersama</strong></h1>
-                                <p style="font-size: 18px;">Nikmati pembelajaran tanpa batas yang difasilitasi oleh mentor ahli di bidangnya.</p>
-                            </div>
-                            <div class=" img-product col-lg-5 d-flex gap-4">
-                                <img src="../asset/Image/Product-image/product-1.jpeg" class="img-fluid mx-auto d-block aos-init aos-animate" style="border-radius: 20px;" alt="" data-aos="fade-left" data-aos-duration="1500">
-                                <img src="../asset/Image/Product-image/product-2.jpeg" class="img-fluid d-none d-lg-flex aos-init aos-animate" style="border-radius: 20px;" alt="" data-aos="fade-left" data-aos-duration="1500">
-                                <img src="../asset/Image/Product-image/product-2.jpeg" class="img-fluid d-none d-lg-flex aos-init aos-animate" style="border-radius: 20px;" alt="" data-aos="fade-left" data-aos-duration="1500">
+                    <div class=" d-flex justify-content-center">
+                        <div class="text-start col m-5">
+                            <div class="margin">
+                                <h1>Tonton, Pahami,<br>Tumbuh Bersama.</h1>
+                                <p>Nikmati pembelajaran tanpa batas yang difasilitasi oleh mentor ahli di bidangnya.</p>
                             </div>
                         </div>
+                        <div class="col-7 m-5">
+                            <img src="../asset/Image/Product-image/product-1.jpeg" class="portrait m-1">
+                            <img src="../asset/Image/Product-image/product-2.jpeg" class="m-1 img-fluid" style="border-radius: 10%; width:150px;  height:400px">
+                            <img src="../asset/Image/Product-image/product-2.jpeg" class="m-1 img-fluid" style="border-radius: 10%; width:150px;  height:400px">
+                        </div>
                     </div>
+                    <!--searching-->
                     <h3 class="fw-bold text-center mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Temukan Product yang sesuai<br>dengan minat Anda</h3>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="col-md-5">
-                            <div class="input-group aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                            <div class=" button input-group aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                                 <input type="text" class="form-control" id="inputSearchCourse" placeholder="Cari Product yang anda sukai">
-                                <button class="btn btn-primary px-4 border-start-0" id="btnSearchCourse"><svg class="svg-inline--fa fa-magnifying-glass" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"></path></svg><!-- <i class="fas fa-search"></i> Font Awesome fontawesome.com --></button>
+                                <button class="btn px-4 border-start-0" id="btnSearchCourse"><img width="20" height="20" src="https://img.icons8.com/ios/50/0000/search--v1.png" alt="search--v1"/></button>
                             </div>
                         </div>
                     </div>
+                    <!--Category-->
                     <div id="card-category">
-                        <div class="list mt-5 mb-4 text-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
-                            <button class="btn btn-primary px-3 semua active" data-category="">Semua</button>
-                            <button class="btn btn-primary px-3 ms-1" data-category="basic">Basic</button>
-                            <button class="btn btn-primary px-3 ms-1" data-category="intermediate">Intermediate</button>
-                            <button class="btn btn-primary px-3 ms-1" data-category="advanced">Advanced</button>
+                        <div class="button list mt-5 mb-4 text-center aos-init aos-animate">
+                            <button class="btn px-3 " data-category="">Semua</button>
+                            <button class="btn px-3 ms-1" data-category="basic">Basic</button>
+                            <button class="btn px-3 ms-1" data-category="intermediate">Intermediate</button>
+                            <button class="btn px-3 ms-1" data-category="advanced">Advanced</button>
                         </div>
                     </div>
                     <!--PRODUCT-->
-                    <div class="properti border ms-2 me-2 p-4">
-                        <img src="../asset/Image/Product-image/product-3.jpeg" class="img-fluid mx-auto" style="border-radius:10px" width="50%">
-                        <div>
-                            <div>
-
+                    <div class="container ms-2 me-2 p-4 shadow p-3 mb-5 bg-body rounded">
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class=" landscape img-fluid img-tumbnail">
+                            </div>
+                            <div class="col">
+                                <div class="row mt-2">
+                                    <div class="col d-flex justify-content-center align-items">
+                                        <img src="../asset/icon/brand-logo.png" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
+                                    </div>
+                                    <div class="col-10 mt-1">
+                                        <h4 class="mb-1">Graphic design</h4>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="mb-1">Jl. Gorongan 5 Depok</p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">53 Proyek kebangun</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 ">
+                                    <p>Dengan menggunakan kelas me-{nilai}, Anda dapat dengan mudah mengatur margin kanan dari elemen
+                                        sesuai kebutuhan desain Anda.dimana {nilai} adalah angka dari 0 hingga 5 yang menunjukkan besar margin kanan yang diinginkan.
+                                    </p>
+                                    <a class="track-click" data-id="45426" style="color:  #5C4009;" href="/profile/pranata-design">
+                                        Read more &gt;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container ms-2 me-2 p-4 shadow p-3 mb-5 bg-body rounded">
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://i.pinimg.com/564x/ee/a7/24/eea7242a584facb89f209cb45c6bd8d9.jpg" class=" landscape img-fluid img-tumbnail">
+                            </div>
+                            <div class="col">
+                                <div class="row mt-2">
+                                    <div class="col d-flex justify-content-center align-items">
+                                        <img src="../asset/icon/brand-logo.png" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
+                                    </div>
+                                    <div class="col-10 mt-1">
+                                        <h4 class="mb-1">Graphic design</h4>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="mb-1">Jl. Gorongan 5 Depok</p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">53 Proyek kebangun</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 ">
+                                    <p>Dengan menggunakan kelas me-{nilai}, Anda dapat dengan mudah mengatur margin kanan dari elemen
+                                        sesuai kebutuhan desain Anda.dimana {nilai} adalah angka dari 0 hingga 5 yang menunjukkan besar margin kanan yang diinginkan.
+                                    </p>
+                                    <a class="track-click" data-id="45426" style="color:  #5C4009;" href="/profile/pranata-design">
+                                        Read more &gt;
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container ms-2 me-2 p-4 shadow p-3 mb-5 bg-body rounded">
+                        <div class="row">
+                            <div class="col">
+                                <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class=" landscape img-fluid img-tumbnail">
+                            </div>
+                            <div class="col">
+                                <div class="row mt-2">
+                                    <div class="col d-flex justify-content-center align-items">
+                                        <img src="../asset/icon/brand-logo.png" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
+                                    </div>
+                                    <div class="col-10 mt-1">
+                                        <h4 class="mb-1">Graphic design</h4>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="mb-1">Jl. Gorongan 5 Depok</p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">53 Proyek kebangun</p>
+                                    </div>
+                                </div>
+                                <div class="mt-2 ">
+                                    <p>Dengan menggunakan kelas me-{nilai}, Anda dapat dengan mudah mengatur margin kanan dari elemen
+                                        sesuai kebutuhan desain Anda.dimana {nilai} adalah angka dari 0 hingga 5 yang menunjukkan besar margin kanan yang diinginkan.
+                                    </p>
+                                    <a class="track-click" data-id="45426" style="color:  #5C4009;" href="/profile/pranata-design">
+                                        Read more &gt;
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
