@@ -8,3 +8,6 @@ body{
 .img-product{
     height: 450px;
 }
+.product img{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, color */
+}
