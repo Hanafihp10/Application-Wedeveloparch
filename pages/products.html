@@ -11,68 +11,69 @@
     </head>
     <body class="body">
         <header>
-            <nav class="navbar navbar-expand-lg fixed-top bg-dark p-3">
-                <img src="../asset/icon/wedev-logo.png" style="border-radius: 10%;" alt="" width="50" />
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Product </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Design</a></li>
-                                <li><a class="dropdown-item" href="#">Consultant</a></li>
-                                <li><a class="dropdown-item" href="#">Edukasi</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
-                        </li>
+          <nav class="navbar navbar-expand-lg shadow bg-body rounded">
+            <div class="container-fluid">
+              <img src="../asset/icon/wedev-logo.png" alt="" width="60" />
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Product </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Desain</a></li>
+                      <li><a class="dropdown-item" href="#">Konsultasi</a></li>
+                      <li><a class="dropdown-item" href="#">Edukasi</a></li>
                     </ul>
-                        <button class="btn btn-outline-dark" type="submit"><b>Login</b></button>
-                    </div>
-                </div>
-            </nav>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                  </li>
+                </ul>
+                <button class="btn btn-outline-dark" type="submit"><b>Login</b></button>
+              </div>
+            </div>
+          </nav>
         </header>
         <main>
             <div class="scrolled-offset mt-6">
                 <div class="container mb-5 py-5">
                     <div class="intro d-flex justify-content-center">
-                        <div class="text-start col m-5">
-                            <div class="Intro-">
+                        <div class="text-start col">
+                            <div class="Intro">
                                 <h1><strong>Tonton, Pahami,<br>Tumbuh Bersama.</strong></h1>
                                 <p>Nikmati pembelajaran tanpa batas yang difasilitasi oleh mentor ahli di bidangnya.</p>
                             </div>
                         </div>
                         <div class="img-intro col-7 m-5">
                             <img src="../asset/Image/Product-image/product-1.jpeg" class="portrait m-1">
-                            <img src="https://i.pinimg.com/236x/fa/86/6d/fa866de2c00e775e8eeacbdc08357da4.jpg" class="img-2 m-1 img-fluid" style="border-radius: 10%; width:150px;  height:400px">
-                            <img src="https://i.pinimg.com/236x/d6/64/cf/d664cfafd5b38379c5c0638695925bd9.jpg" class="img-2 m-1 img-fluid" style="border-radius: 10%; width:150px;  height:400px">
+                            <img src="https://i.pinimg.com/236x/fa/86/6d/fa866de2c00e775e8eeacbdc08357da4.jpg" class="img-2 m-1 img-fluid" style="border-radius: 5%; width:150px;  height:400px">
+                            <img src="https://i.pinimg.com/236x/d6/64/cf/d664cfafd5b38379c5c0638695925bd9.jpg" class="img-2 m-1 img-fluid" style="border-radius: 5%; width:150px;  height:400px">
                         </div>
                     </div>
                     <!--searching-->
                     <h3 class="fw-bold text-center mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">Temukan Product yang sesuai<br>dengan minat Anda</h3>
                     <div class="d-flex justify-content-center align-items-center">
                         <div class="col-md-5">
-                            <div class=" button input-group aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                            <div class=" button-srch input-group aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                                 <input type="text" class="form-control" id="inputSearchCourse" placeholder="Cari Product yang anda sukai">
-                                <button class="btn px-4 border-start-0" id="btnSearchCourse"><img width="20" height="20" src="https://img.icons8.com/ios/50/0000/search--v1.png" alt="search--v1"/></button>
+                                <button class="btn px-4 border-start-0" id="btnSearchCourse"><img width="30" height="30" src="../asset/icon/search.png" alt="search--v1"/></button>
                             </div>
                         </div>
                     </div>
                     <!--Category-->
                     <div id="card-category">
                         <div class="button list mt-5 mb-4 text-center aos-init aos-animate">
-                            <button class="btn px-3 " data-category="">Semua</button>
-                            <button class="btn px-3 ms-1" data-category="basic">Basic</button>
-                            <button class="btn px-3 ms-1" data-category="intermediate">Intermediate</button>
+                            <button class="btn btn-outline-dark px-3 " data-category="">Semua</button>
+                            <button class="btn btn-outline-dark px-3 ms-1" data-category="basic">Basic</button>
+                            <button class="btn btn-outline-dark px-3 ms-1" data-category="intermediate">Intermediate</button>
                         </div>
                     </div>
                     <!--PRODUCT-->
@@ -103,7 +104,7 @@
                                     </a>
                                 </div>
                                 <div class="float-end">
-                                    <button type="button" class="btn btn-light">Minta Penawaran</button>
+                                    <button type="Summit" class="btn btn-outline-dark">Minta Penawaran</button>
                                 </div>
                             </div>
                         </div>
