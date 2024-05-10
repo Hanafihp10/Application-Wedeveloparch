@@ -12,6 +12,10 @@ Login-Page
 
 ![image](https://github.com/Hanafihp10/Pemweb-FP/assets/150600113/70423091-648f-4ac3-ad04-e7be8bb79ab0)
 
+Sign-up
+
+![image](https://github.com/Hanafihp10/Application-Wedevelopard/assets/150600113/660ed9f7-9ba8-4e49-bc37-ae629dd0472e)
+
 
 
 
