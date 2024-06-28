@@ -35,7 +35,7 @@
 									</label>
 								</div>
 								<div class="w-50 text-md-right">
-									<a class="txt1" href="#">
+									<a class="txt1" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-up.php">
 									Create new account
 									<i class="fa fa-long-arrow-right"></i>
 									</a>

@@ -11,36 +11,37 @@
     </head>
     <body class="body">
         <header>
-            <nav class="navbar navbar-expand-lg shadow bg-body rounded">
-                <div class="container-fluid">
-                    <img src="../asset/icon/wedev-logo.png" alt="" width="60" />
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Product </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Desain</a></li>
-                                    <li><a class="dropdown-item" href="#">Konsultasi</a></li>
-                                    <li><a class="dropdown-item" href="#">Edukasi</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
-                            </li>
-                        </ul>
-                        <button class="btn btn-outline-dark" type="submit"><b>Login</b></button>
-                    </div>
-                </div>
-            </nav>
+        <nav class="navbar navbar-expand-lg shadow bg-body rounded">
+        <div class="container-fluid">
+        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60" height="60" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Perancangan Denah</a></li>
+                                <li><a class="dropdown-item" href="#">Desain 3D</a></li>
+                                <li><a class="dropdown-item" href="#">Pembuatan DED</a></li>
+                                <li><a class="dropdown-item" href="#">Gambar Detail Arsitektur</a></li>
+                                <li><a class="dropdown-item" href="#">Desain Exterior & Interior</a></li>
+                                <li><a class="dropdown-item" href="#">Estimasi RAB</a></li>
+                                <li><a class="dropdown-item" href="#">Desain Landscape</a></li>
+                            </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Contact</a>
+                    </li>
+                </ul>
+                <img href="#" src="https://img.icons8.com/?size=100&id=c8SsrDOfQgn3&format=png&color=000000" alt="" width="60">
+            </div>
+        </div>
+    </nav>
         </header>
         <main>
             <div class="scrolled-offset mt-6">
