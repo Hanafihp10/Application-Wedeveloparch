@@ -1,15 +1,14 @@
 <?php
-$servername = "localhost"; // Nama host
-$username = "your_username"; // Nama pengguna database
-$password = "your_password"; // Kata sandi pengguna database
-$dbname = "your_database"; // Nama database
-
-// Membuat koneksi
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+$config = mysqli_connect("localhost", "root", "", "fp_pemweb");
 // Memeriksa koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+if (!$config) {
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
+
+// Mengatur charset ke utf8
+if (!mysqli_set_charset($config, "utf8")) {
+    die("Error loading character set utf8: " . mysqli_error($config));
+}
+
 echo "Koneksi berhasil";
 ?>
