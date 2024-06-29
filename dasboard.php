@@ -15,7 +15,7 @@
     <header>
       <nav class="navbar navbar-expand-lg shadow bg-body rounded">
         <div class="container-fluid">
-            <img src="../asset/icon/wedev-logo.png" alt="" width="60" />
+        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60" height="60" />
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,21 +25,13 @@
                         <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Product </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Desain</a></li>
-                            <li><a class="dropdown-item" href="#">Konsultasi</a></li>
-                            <li><a class="dropdown-item" href="#">Edukasi</a></li>
-                        </ul>
+                        <a class="nav-link" aria-current="page" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                        <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Contact</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline-dark" type="submit"><b>Login</b></button>
+                <button class="btn btn-outline-dark" onclick="location.href='http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php';"><b>Login</b></button>
             </div>
         </div>
     </nav>
@@ -57,27 +49,6 @@
       <div class="Judul mt-5 mb-4 text-center" style="color: #000000">
         <h1>Layanan Kami</h1>
       </div>
-
-      <section class="lyn-kami">
-        <div class="row text-center mt-5 mb-5">
-          <div class="col-sm-4">
-            <div class="card bg-primary">
-              <a href="#" class="btn">Desain</a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card bg-primary">
-              <a href="#" class="btn">Konsultasi</a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card bg-primary">
-              <a href="#" class="btn">Edukasi</a>
-            </div>
-          </div>
-        </div>
-        <hr />
-      </section>
 
       <section class="list-layanan">
         <div class="row mt-5 justify-content-between rounded-5">
@@ -179,6 +150,7 @@
                   <div class="progress" style="height: 1px">
                     <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
+                  
                   <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height: 2rem">1</button>
                   <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height: 2rem">2</button>
                   <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height: 2rem">3</button>
@@ -191,6 +163,7 @@
         <hr />
       </section>
     </section>
+
 
     <footer class="bg-dark">
       <div class="container-2">

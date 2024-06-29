@@ -1,112 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&famiy=Poppin:ital,wght@0,100;0,200;0,300;0,400;0,500;0600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.body{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font: weight 700px;;
-    font-style: bold;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&famiy=Poppin:ital,wght@0,100;0,200;0,300;0,400;0,500;0600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font: weight 700px;
+  font-style: bold;
 }
 nav {
 }
 nav div img {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 .navbar {
-    background-color: var(--secondary);
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 20px;
+  background-color: var(--secondary);
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 20px;
 }
-.Intro{
-    margin-top: 40%;
+.Intro {
+  margin-top: 40%;
 }
-.margin{
-    margin-top: 30%;
+.margin {
+  margin-top: 30%;
 }
 /*Option Image (Size)*/
 img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .portrait {
-    height: 400px;
-    width: 400px;
-    border-radius: 10%;
+  height: 400px;
+  width: 400px;
+  border-radius: 10%;
 }
 
 .landscape {
-    height: 400px;
-    width: 700px;
+  height: 400px;
+  width: 700px;
 }
 
 .square {
-    height: 75px;
-    width: 75px;
+  height: 75px;
+  width: 75px;
 }
-.button-srch{
-    color: white;
-    background-color:#212529;
-    outline-color: black;
+.button-srch {
+  color: white;
+  background-color: #212529;
+  outline-color: black;
 }
-.button-srch:hover{
-    background-color: grey;
+.button-srch:hover {
+  background-color: grey;
 }
-.container-1 button{
-    color: white;
-    background-color: #212529;
-    float: right;
-    margin: 150px 50px 0px 0px;
+.container-1 button {
+  color: white;
+  background-color: #212529;
+  float: right;
+  margin: 150px 50px 0px 0px;
 }
-hr{
-    background-color: aliceblue;
+hr {
+  background-color: aliceblue;
 }
-.footer-brand{
-    padding-bottom: 50px;
-    padding-top: 20px;
-    margin: 0px  70px 0px 70px;
+.footer-brand {
+  padding-bottom: 50px;
+  padding-top: 20px;
+  margin: 0px 70px 0px 70px;
 }
-footer{
-    padding: 50px;
+footer {
+  padding: 50px;
 }
-footer .col h6{
-    color: white;
-    margin-bottom: 20px;
+footer .col h6 {
+  color: white;
+  margin-bottom: 20px;
 }
-footer .col h2{
-    padding: 0;
-    margin:0;
-    color: white;
+footer .col h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-size: 60px;
+}
+footer .col p {
+  font-size: 12px;
+  color: white;
+  margin: 0;
+}
+@media only screen and (max-width: 450px) {
+  .img-2 {
+    display: none;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .img-1 {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .intro- h1 p {
+    justify-content: center;
     text-align: center;
-    height: 100px;
-    line-height: 100px;
-    font-size: 60px;
+  }
 }
-footer .col p{
-    font-size: 12px;
-    color: white;
-    margin: 0;
-}
-@media only screen and (max-width:450px){
-    .img-2{
-        display: none;
-    }
-}
-@media only screen and (min-width: 400px){
-    .img-1{
-        width: 100%;
-        height: 100%;
-    }
-}
-@media only screen and (max-width: 450px){
-    .intro- h1 p{
-        justify-content: center;
-        text-align: center;
-    }
-}
-@media only screen and (min-width: 400px){
-    .footer .col{
-        justify-content: center;
-        align-items: center;
-    }
+@media only screen and (min-width: 400px) {
+  .footer .col {
+    justify-content: center;
+    align-items: center;
+  }
 }
