@@ -9,6 +9,4 @@ if (!$config) {
 if (!mysqli_set_charset($config, "utf8")) {
     die("Error loading character set utf8: " . mysqli_error($config));
 }
-
-echo "Koneksi berhasil";
 ?>

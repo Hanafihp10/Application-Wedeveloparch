@@ -16,14 +16,43 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">Have an account?</h3>
-						<form action="#" class="signin-form">
+						<?php
+						session_start();
+						include '../admin/db-connect.php'; //script connect db
+						if ($_SERVER["REQUEST_METHOD"] == "POST") {
+							$username = $_POST['username'];
+							$password = $_POST['password'];
+
+							$query = "SELECT * FROM users WHERE username = '$username'";
+							$result = mysqli_query($config, $query);
+
+							if (mysqli_num_rows($result) == 1) {
+								$user = mysqli_fetch_assoc($result);
+								if (password_verify($password, $user['password'])) {
+									$_SESSION['username'] = $username;
+									header("Location: ../pages/products.php");
+									exit();
+								} else {
+									$error = "Username atau password salah";
+								}
+							} else {
+								$error = "Username atau password salah";
+							}
+						}
+						?>
+						<form action="" method="POST" class="signin-form">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Username" required>
+								<input type="text" name="username" class="form-control" placeholder="Username" required>
 							</div>
 							<div class="form-group">
-								<input id="password-field" type="password" class="form-control" placeholder="Password" required>
-								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+								<input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
+								<!-- <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> -->
 							</div>
+							<?php if (isset($error)): ?>
+								<div class="form-group">
+									<p style="color: red;"><?php echo $error; ?></p>
+								</div>
+							<?php endif; ?>
 							<div class="form-group">
 								<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
 							</div>
@@ -35,7 +64,7 @@
 									</label>
 								</div>
 								<div class="w-50 text-md-right">
-									<a class="txt1" href="#">
+									<a class="txt1" href="../pages/Sign-up.php">
 									Create new account
 									<i class="fa fa-long-arrow-right"></i>
 									</a>
@@ -61,4 +90,3 @@
 	<script src="../log/js/main.js"></script>
 	</body>
 </html>
-

@@ -1,9 +1,9 @@
 <?php
-// Memulai sesi dan menghubungkan ke database
 session_start();
 include('../admin/db-connect.php'); // Menghubungkan ke database
 
 $registration_success = false;
+$duplicate_error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST['nama'];
@@ -14,22 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validasi input
     if ($password !== $repeat_password) {
-        echo "Password tidak cocok!";
+        echo "<script>alert('Password tidak cocok!');</script>";
     } else {
-        // Enkripsi password
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
-
-        // Query untuk memasukkan data ke database
         $sql = "INSERT INTO users (nama, username, password, email) VALUES (?, ?, ?, ?)";
         $stmt = $config->prepare($sql);
         $stmt->bind_param("ssss", $nama, $username, $encrypted_password, $email);
 
-        if ($stmt->execute()) {
-            $registration_success = true;
-        } else {
-            // Tangani kesalahan unik
+        try {
+            if ($stmt->execute()) {
+                $registration_success = true;
+            }
+        } catch (mysqli_sql_exception $e) {
             if ($stmt->errno == 1062) {
-                echo "Username atau email sudah digunakan!";
+                $duplicate_error = "Username atau email sudah digunakan!";
             } else {
                 echo "Terjadi kesalahan: " . $stmt->error;
             }
@@ -76,15 +74,19 @@ $config->close();
                         </div>
                         <div class="form-group">
                             <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
-                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
                             <input id="password-field" type="password" name="repeat_password" class="form-control" placeholder="Repeat Password" required>
-                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
                         </div>
+						<div class="w-100 text-md-right">
+							<a class="txt1" href="../pages/Sign-in.php">
+                                Sign-In
+								<i class="fa fa-long-arrow-right"></i>
+							</a>
+						</div>
                     </form>
                     <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
                     <div class="social d-flex justify-content-center">
@@ -111,6 +113,9 @@ $config->close();
                 console.log("Modal content loaded successfully.");
                 <?php if ($registration_success) { ?>
                     $('#myModal').modal('show');
+                <?php } ?>
+                <?php if (!empty($duplicate_error)) { ?>
+                    alert("<?php echo $duplicate_error; ?>");
                 <?php } ?>
             }
         });
