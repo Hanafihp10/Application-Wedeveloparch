@@ -20,8 +20,8 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#">Desain</a></li>
-                                                <li><a class="dropdown-item" href="#">Jasa</a></li>
+                                                <li><a class="dropdown-item" href="#desain-jasa">Desain</a></li>
+                                                <li><a class="dropdown-item" href="#desain-jasa">Jasa</a></li>
                                             </ul>
                                     </li>
                                     <li class="nav-item">
@@ -68,51 +68,91 @@
                 </div>
                 </div>
             </div>
-        </div><br><br>
+        </div><br>
 
 
 
         <div>
-        <h2 class="text-center"><b>Temukan Wilayah dan Minat Anda</b></h2><br>
+        <h2 id="desain-jasa" class="text-center"><b>Temukan Kantor Terdekat</b></h2><br>
         <div class="filter-container text-center">
-                <label for="region-filter">Wilayah: </label>
+                <label for="region-filter"> Wilayah : </label>
                 <select id="region-filter">
-                    <option value="all">Semua</option>
-                    <option value="sumatera">Sumatera</option>
-                    <option value="kalimantan">Kalimantan</option>
-                    <option value="jawa">Jawa</option>
-                    <option value="bali">Bali</option>
+                    <option value="all">Semua</option><hr>
+                    <option value="jatim">Jawa Timur</option><hr>
+                    <option value="jateng">Jawa Tengah</option><hr>
+                    <option value="jogja">Yogyakarta</option><hr>
+                    <option value="jabar">Jawa Barat</option><hr>
+                    <option value="jakarta">Jakarta</option><hr>
                 </select>
-                <label class="ms-4" for="service-filter">Layanan: </label>
+                <label class="ms-4" for="service-filter">Layanan : </label>
                 <select id="service-filter">
-                    <option value="all">Semua</option>
-                    <option value="desain">Desain</option>
-                    <option value="jasa">Jasa</option>
+                    <option value="all">Semua</option><hr>
+                    <option value="desain">Desain</option><hr>
+                    <option value="jasa">Jasa</option><hr>
                 </select>
             </div><br>
 
             <div class="row row-cols-1 row-cols-md-3 g-4 ms-4 me-4 items-container">
-                <div class="col item" data-region="sumatera" data-service="desain">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
+                <div class="col item" data-region="jatim" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
                         <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Desain<br>3D</b></h5>
+                                    <h5><b>CV Wirakata Studio</b></h5><hr>
                                     <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="sumatera">Sumatera</p>
+                                    <p class="fs-20" value="jatim"> Surabaya </p>
                                     <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Wirakata Studio</p>
+                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
                                 </div>
                             </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
                         </div>
                     </div>
                 </div>
-                <div class="col item" data-region="sumatera" data-service="jasa">
+                <div class="col item" data-region="jatim" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Arcite Design</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jatim"> Malang </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jatim" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Karya Kreatif</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jatim"> Kediri </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col item" data-region="jawa" data-service="jasa">
                     <div class="card">
                         <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -123,7 +163,7 @@
                                 <div class="col">
                                     <h5><b>Estimasi <br> RAB</b></h5>
                                     <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="sumatera">Jawa</p>
+                                    <p class="" value="jawa">Jawa</p>
                                     <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
                                     <p class="">CV Ambar Waskita</p>
                                 </div>
