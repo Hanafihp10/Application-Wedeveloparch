@@ -10,6 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $repeat_password = $_POST['repeat_password'];
+    $no_telepon = isset($_POST['no_telepon']) ? $_POST['no_telepon'] : '';
+    $alamat = isset($_POST['alamat']) ? $_POST['alamat'] : '';
     $email = $_POST['email'];
 
     // Validasi input
@@ -17,9 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Password tidak cocok!');</script>";
     } else {
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (nama, username, password, email) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO users (nama, username, password, email, no_telepon, alamat) VALUES (?, ?, ?, ?, ?, ?)";
         $stmt = $config->prepare($sql);
-        $stmt->bind_param("ssss", $nama, $username, $encrypted_password, $email);
+        $stmt->bind_param("ssssss", $nama, $username, $encrypted_password, $email, $no_telepon, $alamat); // Sesuaikan jumlah kolom dan nilai
 
         try {
             if ($stmt->execute()) {
@@ -36,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
     }
 }
-
 $config->close();
 ?>
 
@@ -71,6 +72,12 @@ $config->close();
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="int" name="no_telepon" class="form-control" placeholder="No_telepon" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="alamat" class="form-control" placeholder="Address" required>
                         </div>
                         <div class="form-group">
                             <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
