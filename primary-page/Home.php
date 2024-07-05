@@ -37,7 +37,6 @@
             </nav>
         </header>
 
-
         <main>
         <div class="row ms-4 mt-5 me-4">
             <div class="col-sm-3">
@@ -70,26 +69,24 @@
             </div>
         </div><br>
 
-
-
         <div>
-        <h2 id="desain-jasa" class="text-center"><b>Temukan Kantor Terdekat</b></h2><br>
-        <div class="filter-container text-center">
-                <label for="region-filter"> Wilayah : </label>
-                <select id="region-filter">
-                    <option value="all">Semua</option><hr>
-                    <option value="jatim">Jawa Timur</option><hr>
-                    <option value="jateng">Jawa Tengah</option><hr>
-                    <option value="jogja">Yogyakarta</option><hr>
-                    <option value="jabar">Jawa Barat</option><hr>
-                    <option value="jakarta">Jakarta</option><hr>
-                </select>
-                <label class="ms-4" for="service-filter">Layanan : </label>
-                <select id="service-filter">
-                    <option value="all">Semua</option><hr>
-                    <option value="desain">Desain</option><hr>
-                    <option value="jasa">Jasa</option><hr>
-                </select>
+            <h2 id="desain-jasa" class="text-center"><b>Temukan Kantor Terdekat</b></h2><br>
+            <div class="filter-container text-center">
+                    <label for="region-filter"> Wilayah : </label>
+                    <select id="region-filter">
+                        <option value="all">Semua</option><hr>
+                        <option value="jatim">Jawa Timur</option><hr>
+                        <option value="jateng">Jawa Tengah</option><hr>
+                        <option value="jogja">Yogyakarta</option><hr>
+                        <option value="jabar">Jawa Barat</option><hr>
+                        <option value="jakarta">Jakarta</option><hr>
+                    </select>
+                    <label class="ms-4" for="service-filter">Layanan : </label>
+                    <select id="service-filter">
+                        <option value="all">Semua</option><hr>
+                        <option value="desain">Desain</option><hr>
+                        <option value="jasa">Jasa</option><hr>
+                    </select>
             </div><br>
 
             <div class="row row-cols-1 row-cols-md-3 g-4 ms-4 me-4 items-container">
@@ -111,10 +108,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col item" data-region="jatim" data-service="desain">
-                    <div class="card border-1 rounded-2 shadow">
-                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
+            <div class="col item" data-region="jatim" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                       <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
                                     <h5><b>CV Arcite Design</b></h5><hr>
@@ -125,13 +122,13 @@
                                 </div>
                             </div>
                             <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                        </div>
-                    </div>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                     </div>
                 </div>
-                <div class="col item" data-region="jatim" data-service="desain">
-                    <div class="card border-1 rounded-2 shadow">
-                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+            </div>
+            <div class="col item" data-region="jatim" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
                         <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
@@ -143,211 +140,225 @@
                                 </div>
                             </div>
                             <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                        </div>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
                     </div>
                 </div>
-
-
-
-
-
-                <div class="col item" data-region="jawa" data-service="jasa">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Estimasi <br> RAB</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="jawa">Jawa</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Ambar Waskita</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item" data-region="sumatera" data-service="jasa">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Pembuatan DED</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="sumatera">Bali</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Perkasa Metro</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item" data-region="sumatera" data-service="jasa">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Perancangan Denah</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="sumatera">Sumatera</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Ambar Waskita</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item" data-region="sumatera" data-service="desain">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Desain Landscape</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="sumatera">Sumatera</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Karya Kreatif</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item" data-region="sumatera" data-service="desain">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Detail Arsitektur</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="sumatera">Sumatera</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Home Design</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col item" data-region="kalimantan" data-service="desain">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Desain 3D</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="kalimantan">Kalimantan</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Ambar Waskita</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item" data-region="jawa" data-service="desain">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Desain 3D</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="jawa">Jawa</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Ambar Waskita</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item" data-region="bali" data-service="desain">
-                    <div class="card">
-                        <img src="https://i.pinimg.com/564x/d8/b8/43/d8b84382447839bb30b990e38f5feb73.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <img src="../asset/icon/brand-logo.png" alt="" class="img-fluid" style="border-radius:50%; width:90px; height:90px;">
-                                </div>
-                                <div class="col">
-                                    <h5><b>Desain Interior & Eksterior</b></h5>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="" value="bali">Bali</p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">CV Nusa Perkasa</p>
-                                </div>
-                            </div>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div><br><br>
-
-            <script>
-                const regionFilter = document.getElementById('region-filter');
-                const serviceFilter = document.getElementById('service-filter');
-                const items = document.querySelectorAll('.item');
-
-                function filterItems() {
-                    const selectedRegion = regionFilter.value;
-                    const selectedService = serviceFilter.value;
-
-                    items.forEach(item => {
-                        const itemRegion = item.getAttribute('data-region');
-                        const itemService = item.getAttribute('data-service');
-
-                        if ((selectedRegion === 'all' || itemRegion === selectedRegion) &&
-                            (selectedService === 'all' || itemService === selectedService)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                }
-
-                regionFilter.addEventListener('change', filterItems);
-                serviceFilter.addEventListener('change', filterItems);
-
-                // Initial filter to show all items
-                filterItems();
-            </script>
             </div>
-            <!--PRODUCT-->
-            
 
+            <div class="col item" data-region="jatim" data-service="jasa">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-house-p.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV House Parctic</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jatim"> Kediri </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV House Parctic adalah sebuah perusahaan dibidang jasa arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jatim" data-service="jasa">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-putra-m.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Putra Manunggal</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jatim"> Ponorogo </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Putra Manunggal adalah sebuah perusahaan dibidang jasa arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jatim" data-service="jasa">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wardana-g.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Wardana Group</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jatim"> Lamongan </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang jasa arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col item" data-region="jateng" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Anggara Group</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jateng"> Magelang </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jateng" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV citeam</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jateng"> Semarang </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jateng" data-service="jasa">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Duta Homeic</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jateng"> Semarang </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col item" data-region="jogja" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Architeam</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jogja"> Sleman </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jogja" data-service="jasa">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Arkana Arch</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jogja"> Bantul </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jabar" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Penta Architecture</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jabar"> Surabaya </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col item" data-region="jakarta" data-service="desain">
+                <div class="card border-1 rounded-2 shadow">
+                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Wirakata Studio</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jakarta"> Surabaya </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                    </div>
+                </div>
+            </div>
+        <br><br>
+
+        <script>
+            const regionFilter = document.getElementById('region-filter');
+            const serviceFilter = document.getElementById('service-filter');
+            const items = document.querySelectorAll('.item');
+
+            function filterItems() {
+                const selectedRegion = regionFilter.value;
+                const selectedService = serviceFilter.value;
+
+                items.forEach(item => {
+                    const itemRegion = item.getAttribute('data-region');
+                    const itemService = item.getAttribute('data-service');
+
+                    if ((selectedRegion === 'all' || itemRegion === selectedRegion) &&
+                        (selectedService === 'all' || itemService === selectedService)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                        }
+                });
+            }
+
+            regionFilter.addEventListener('change', filterItems);
+            serviceFilter.addEventListener('change', filterItems);
+
+            // Initial filter to show all items
+            filterItems();
+        </script>
+        </div>
+        </main><br><br>
 
         <footer class="bg-dark">
             <div class="container-2">
