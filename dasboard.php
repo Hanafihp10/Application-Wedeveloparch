@@ -24,12 +24,15 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
                       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Desain</a></li>
-                          <li><a class="dropdown-item" href="#">Jasa</a></li>
+                          <li><a class="dropdown-item" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php">Desain</a></li>
+                          <li><a class="dropdown-item" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php">Jasa</a></li>
                       </ul>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php"> Daftar Proyek</a>
+                      <a class="nav-link" aria-current="page" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/Daftar%20Proyek/Daftar_proyek.php"> Daftar Proyek</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Cara Pesan</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Contact</a>
@@ -137,6 +140,7 @@
       </section>
       <hr />
 
+    
       
       <section class="container-fluid m-0 p-0"><br><br>
         <h3 class="text-center">Proyek Selesai</h3><br>
