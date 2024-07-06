@@ -3,8 +3,6 @@ $config = mysqli_connect("localhost", "root", "", "fp_pemweb");
 // Memeriksa koneksi
 if (!$config) {
     die("Koneksi gagal: " . mysqli_connect_error());
-} else {
-    echo "Koneksi berhasil";
 }
 
 // Mengatur charset ke utf8
