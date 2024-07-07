@@ -119,35 +119,31 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                <h1>Form Pembelian</h1>
+                                <h3>Form Pemesanan</h3>
                                 <?php include 'proses.php'; ?>
-    <!-- Form untuk input transaksi -->
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <label for="nama_transaksi">Nama    :</label>
-        <input type="text" id="nama_transaksi" name="nama_transaksi" required><br><br>
+                                <!-- Form untuk input transaksi -->
+                                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <label for="nama_transaksi">Nama :</label><br>
+                                    <input type="text" id="nama_transaksi" name="nama_transaksi" required><br><br>
 
-        <label for="kategori_proyek_transaksi">Kategori     :</label>
-        <select id="kategori_proyek_transaksi" name="kategori_proyek_transaksi" required>
-            <option value="Pilih">Pilih</option>
-            <option value="Desain">Desain</option>
-            <option value="Jasa">Jasa</option>
-        </select><br><br>
+                                    <label for="kategori_proyek_transaksi">Kategori :</label><br>
+                                    <select id="kategori_proyek_transaksi" name="kategori_proyek_transaksi" required>
+                                        <option value="Pilih">Pilih</option>
+                                        <option value="Desain">Desain</option>
+                                        <option value="Jasa">Jasa</option>
+                                    </select><br><br>
 
-        <label for="pesanan">Pesanan    :</label>
-        <input type="text" id="pesanan" name="pesanan" required><br><br>
+                                    <label for="pesanan">Pesanan :</label><br>
+                                    <input type="text" id="pesanan" name="pesanan" required><br><br>
 
-        <label for="alamat">Alamat   :</label>
-        <input type="text" id="alamat" name="alamat" required><br><br>
+                                    <label for="alamat">Alamat   :</label><br>
+                                    <input type="text" id="alamat" name="alamat" required><br><br>
 
-        <label for="no_hp">No HP   :</label>
-        <input type="text" id="no_hp" name="no_hp" required><br><br>
+                                    <label for="no_hp">No HP :</label><br>
+                                    <input type="text" id="no_hp" name="no_hp" required><br><br>
 
-        <button type="submit" name="submit_transaksi">Submit Pesanan</button>
-    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="submit" name="submit_transaksi">Submit Pesanan</button>
+                                </form>
                                 </div>
                                 </div>
                             </div>
