@@ -42,15 +42,15 @@
             <div class="col-sm-3">
                 <div class="card shadow">
                 <div class="card-body text-center" style="font-size: 16px">
-                    <h5 class="card-title text-primary" style="font-size: 15px"><b>Semua Layanan</b></h5><hr>
-                    <div style="font-size: 14px" class="text-primary">
-                        <a href="#" class="list-group-item list-group-item-action">Desain 3D</a><hr>
-                        <a href="#" class="list-group-item list-group-item-action">Desain Interior & Eksterior</a><hr>
-                        <a href="#" class="list-group-item list-group-item-action">Desain Landscape</a><hr>
-                        <a href="#" class="list-group-item list-group-item-action">Detail Gambar Arsitektur</a><hr>
-                        <a href="#" class="list-group-item list-group-item-action">Perancangan Denah</a><hr>
-                        <a href="#" class="list-group-item list-group-item-action">Pembuatan DED</a><hr>
-                        <a href="#" class="list-group-item list-group-item-action">Estimasi RAB</a><hr>
+                    <h5 class="card-title" style="font-size: 15px"><b>Layanan Perusahaan</b></h5><hr>
+                    <div style="font-size: 14px">
+                        <p href="#" class="list-group-item list-group-item-action">Desain 3D</p><hr>
+                        <p href="#" class="list-group-item list-group-item-action">Desain Interior & Eksterior</p><hr>
+                        <p href="#" class="list-group-item list-group-item-action">Desain Landscape</p><hr>
+                        <p href="#" class="list-group-item list-group-item-action">Detail Gambar Arsitektur</p><hr>
+                        <p href="#" class="list-group-item list-group-item-action">Perancangan Denah</p><hr>
+                        <p href="#" class="list-group-item list-group-item-action">Pembuatan DED</p><hr>
+                        <p href="#" class="list-group-item list-group-item-action">Estimasi RAB</p><hr>
                     </div>
                 </div>
                 </div>
@@ -104,259 +104,484 @@
                                 </div>
                             </div>
                             <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CV Wirakata Studio</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <h1>Form Pembelian</h1>
+                                <?php include 'proses.php'; ?>
+    <!-- Form untuk input transaksi -->
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <label for="nama_transaksi">Nama    :</label>
+        <input type="text" id="nama_transaksi" name="nama_transaksi" required><br><br>
+
+        <label for="kategori_proyek_transaksi">Kategori     :</label>
+        <select id="kategori_proyek_transaksi" name="kategori_proyek_transaksi" required>
+            <option value="Pilih">Pilih</option>
+            <option value="Desain">Desain</option>
+            <option value="Jasa">Jasa</option>
+        </select><br><br>
+
+        <label for="pesanan">Pesanan    :</label>
+        <input type="text" id="pesanan" name="pesanan" required><br><br>
+
+        <label for="alamat">Alamat   :</label>
+        <input type="text" id="alamat" name="alamat" required><br><br>
+
+        <label for="no_hp">No HP   :</label>
+        <input type="text" id="no_hp" name="no_hp" required><br><br>
+
+        <button type="submit" name="submit_transaksi">Submit Pesanan</button>
+    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jatim" data-service="jasa">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Arcite Design</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jatim"> Malang </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
                             <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
                         </div>
                     </div>
                 </div>
-            <div class="col item" data-region="jatim" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                       <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Arcite Design</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jatim"> Malang </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                <div class="col item" data-region="jatim" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                            <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Karya Kreatif</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jatim"> Kediri </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                     </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jatim" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Karya Kreatif</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jatim"> Kediri </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                                <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col item" data-region="jatim" data-service="jasa">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-house-p.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV House Parctic</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jatim"> Kediri </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV House Parctic adalah sebuah perusahaan dibidang jasa arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jatim" data-service="jasa">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-putra-m.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Putra Manunggal</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jatim"> Ponorogo </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Putra Manunggal adalah sebuah perusahaan dibidang jasa arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jatim" data-service="jasa">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wardana-g.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Wardana Group</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jatim"> Lamongan </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang jasa arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col item" data-region="jateng" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Anggara Group</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jateng"> Magelang </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jateng" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV citeam</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jateng"> Semarang </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jateng" data-service="jasa">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Duta Homeic</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jateng"> Semarang </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col item" data-region="jogja" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Architeam</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jogja"> Sleman </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jogja" data-service="jasa">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Arkana Arch</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jogja"> Bantul </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jabar" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
-                        <div class="card-body">
-                            <div class="row align-items-start">
-                                <div class="col">
-                                    <h5><b>CV Penta Architecture</b></h5><hr>
-                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jabar"> Surabaya </p>
-                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
-                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
-                                </div>
-                            </div>
-                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col item" data-region="jakarta" data-service="desain">
-                <div class="card border-1 rounded-2 shadow">
-                    <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                <div class="col item" data-region="jateng" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
                         <div class="card-body">
                             <div class="row align-items-start">
                                 <div class="col">
                                     <h5><b>CV Wirakata Studio</b></h5><hr>
                                     <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
-                                    <p class="fs-20" value="jakarta"> Surabaya </p>
+                                    <p class="fs-20" value="jateng"> Semarang </p>
                                     <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
                                     <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
                                 </div>
                             </div>
                             <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
-                        <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                            
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CV Wirakata Studio</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <h1>Form Pembelian</h1>
+                                <form id="pembelianForm" onsubmit="handleFormSubmit(event)">
+                                    <label for="user_id">User ID:</label>
+                                    <input type="text" id="user_id" name="user_id" required><br><br>
+                                    <label for="produk">Produk:</label>
+                                    <input type="text" id="produk" name="produk" required><br><br>
+                                    <label for="jumlah">Jumlah:</label>
+                                    <input type="number" id="jumlah" name="jumlah" required><br><br>
+                                    <label for="harga">Harga:</label>
+                                    <input type="number" step="0.01" id="harga" name="harga" required><br><br>
+                                    <button type="submit">Pesan Sekarang</button>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <br><br>
+                <div class="col item" data-region="jateng" data-service="jasa">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Arcite Design</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jateng"> Pekalongan </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jateng" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                            <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Karya Kreatif</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jateng"> Solo </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
 
-        <script>
-            const regionFilter = document.getElementById('region-filter');
-            const serviceFilter = document.getElementById('service-filter');
-            const items = document.querySelectorAll('.item');
 
-            function filterItems() {
-                const selectedRegion = regionFilter.value;
-                const selectedService = serviceFilter.value;
+                <div class="col item" data-region="jogja" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Wirakata Studio</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jogja"> Kulon Progo </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Detail
+                            </button>
 
-                items.forEach(item => {
-                    const itemRegion = item.getAttribute('data-region');
-                    const itemService = item.getAttribute('data-service');
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CV Wirakata Studio</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <h1>Form Pembelian</h1>
+                                <form id="pembelianForm" onsubmit="handleFormSubmit(event)">
+                                    <label for="user_id">User ID:</label>
+                                    <input type="text" id="user_id" name="user_id" required><br><br>
+                                    <label for="produk">Produk:</label>
+                                    <input type="text" id="produk" name="produk" required><br><br>
+                                    <label for="jumlah">Jumlah:</label>
+                                    <input type="number" id="jumlah" name="jumlah" required><br><br>
+                                    <label for="harga">Harga:</label>
+                                    <input type="number" step="0.01" id="harga" name="harga" required><br><br>
+                                    <button type="submit">Pesan Sekarang</button>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jogja" data-service="jasa">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Arcite Design</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jogja"> Sleman </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jogja" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                            <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Karya Kreatif</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jogja"> Bantul </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
 
-                    if ((selectedRegion === 'all' || itemRegion === selectedRegion) &&
-                        (selectedService === 'all' || itemService === selectedService)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                        }
-                });
-            }
 
-            regionFilter.addEventListener('change', filterItems);
-            serviceFilter.addEventListener('change', filterItems);
+                <div class="col item" data-region="jabar" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Wirakata Studio</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jabar"> Cirebon </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Detail
+                            </button>
 
-            // Initial filter to show all items
-            filterItems();
-        </script>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CV Wirakata Studio</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <h1>Form Pembelian</h1>
+                                <form id="pembelianForm" onsubmit="handleFormSubmit(event)">
+                                    <label for="user_id">User ID:</label>
+                                    <input type="text" id="user_id" name="user_id" required><br><br>
+                                    <label for="produk">Produk:</label>
+                                    <input type="text" id="produk" name="produk" required><br><br>
+                                    <label for="jumlah">Jumlah:</label>
+                                    <input type="number" id="jumlah" name="jumlah" required><br><br>
+                                    <label for="harga">Harga:</label>
+                                    <input type="number" step="0.01" id="harga" name="harga" required><br><br>
+                                    <button type="submit">Pesan Sekarang</button>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jabar" data-service="jasa">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Arcite Design</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jabar"> Bogor </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jabar" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                            <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Karya Kreatif</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jabar"> Bandung </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col item" data-region="jakarta" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-wirakata.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                            <div class="row align-items-start">
+                                <div class="col">
+                                    <h5><b>CV Wirakata Studio</b></h5><hr>
+                                    <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                    <p class="fs-20" value="jakarta"> Jakarta Selatan </p>
+                                    <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                    <p class="">Jl. Setail No.1, Darmo, Kec. Wonokromo, Surabaya, Jawa Timur 60241</p>
+                                </div>
+                            </div>
+                            <p class="card-text">CV Wirakata Studio adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Detail
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">CV Wirakata Studio</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <h1>Form Pembelian</h1>
+                                <form id="pembelianForm" onsubmit="handleFormSubmit(event)">
+                                    <label for="user_id">User ID:</label>
+                                    <input type="text" id="user_id" name="user_id" required><br><br>
+                                    <label for="produk">Produk:</label>
+                                    <input type="text" id="produk" name="produk" required><br><br>
+                                    <label for="jumlah">Jumlah:</label>
+                                    <input type="number" id="jumlah" name="jumlah" required><br><br>
+                                    <label for="harga">Harga:</label>
+                                    <input type="number" step="0.01" id="harga" name="harga" required><br><br>
+                                    <button type="submit">Pesan Sekarang</button>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jakarta" data-service="jasa">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-arcite.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                        <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Arcite Design</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jakarta"> Jakarta Barat </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Merdeka Selatan, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Arcite Design adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item" data-region="jakarta" data-service="desain">
+                    <div class="card border-1 rounded-2 shadow">
+                        <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/logo-kreatif.jpeg" class="card-img-top mx-auto d-block" alt="..." style="width: 100px; height: 100px">
+                            <div class="card-body">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h5><b>CV Karya Kreatif</b></h5><hr>
+                                        <img width="20" height="auto" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1" class="float-start me-1"/>
+                                        <p class="fs-20" value="jakarta"> Jakarta Pusat </p>
+                                        <img width="20" height="auto" src="https://img.icons8.com/sf-ultralight/25/home.png" alt="home" class="float-start me-1"/>
+                                        <p class="">Jl. Panglima Sudirman, Kp. Dalem, Kec. Kota, Kota Kediri, Jawa Timur 64129</p>
+                                    </div>
+                                </div>
+                                <p class="card-text">CV Karya Kreatif adalah sebuah perusahaan dibidang desain arsitektur bangunan</b></p>
+                            <button class="border-1 rounded-2 border-primary text-primary"><b>Pesan Sekarang</b></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><br><br>
+
+            <script>
+                const regionFilter = document.getElementById('region-filter');
+                const serviceFilter = document.getElementById('service-filter');
+                const items = document.querySelectorAll('.item');
+
+                function filterItems() {
+                    const selectedRegion = regionFilter.value;
+                    const selectedService = serviceFilter.value;
+
+                    items.forEach(item => {
+                        const itemRegion = item.getAttribute('data-region');
+                        const itemService = item.getAttribute('data-service');
+
+                        if ((selectedRegion === 'all' || itemRegion === selectedRegion) &&
+                            (selectedService === 'all' || itemService === selectedService)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                            }
+                    });
+                }
+
+                regionFilter.addEventListener('change', filterItems);
+                serviceFilter.addEventListener('change', filterItems);
+
+                // Initial filter to show all items
+                filterItems();
+            </script>
         </div>
         </main><br><br>
 

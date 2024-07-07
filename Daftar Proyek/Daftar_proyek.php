@@ -43,8 +43,8 @@
         <div class="text-center mt-5">
         <h1>Semua <span class="text-danger">Daftar</span>  Proyek</h1><br>
         <div class="filter-buttons">
-            <button onclick="filterItems('jasa')" class="rounded-2 border-info bg-light me-3">Jasa</button>
-            <button onclick="filterItems('desain')" class="rounded-2 border-info bg-light me-3">Desain</button>
+            <button onclick="filterItems('jasa')" class="rounded-2 border-info bg-light me-3" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/primary-page/home.php">Jasa</button>
+            <button onclick="filterItems('desain')" class="rounded-2 border-info bg-light me-3" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/primary-page/home.php">Desain</button>
           </div>
 
           <div class="items"><br>
