@@ -24,21 +24,18 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php">Desain</a></li>
-                                <li><a class="dropdown-item" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php">Jasa</a></li>
+                                <li><a class="dropdown-item" href="http://localhost/Application-Wedeveloparch/pages/Sign-In.php">Desain</a></li>
+                                <li><a class="dropdown-item" href="http://localhost/Application-Wedeveloparch/pages/Sign-In.php">Jasa</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/Daftar%20Proyek/Daftar_proyek.php"> Daftar Proyek</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="" tabindex="-1" aria-disabled="true">Cara Pesan</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Contact</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-dark text-primary" onclick="location.href='http://localhost/FP-PEMWEB/Application-Wedeveloparch/pages/Sign-In.php'"><b>Login</b></button>
+                    <button class="btn btn-outline-dark text-primary" onclick="location.href='http://localhost/Application-Wedeveloparch/pages/Sign-In.php'"><b>Login</b></button>
                 </div>
             </div>
         </nav>
@@ -255,32 +252,27 @@
         <footer class="bg-dark">
             <div class="container-2">
                 <div class="row">
-                    <div class="col ms-1">
-                        <h6>CONTACT US</h6>
-                        <p><strong>Address</strong></p>
-                        <p>Jl. Veteran No. 1 A, Babakan, Tangerang</p>
-                        <p><strong>Phone</strong></p>
-                        <p>082299820100</p>
-                        <p><strong>Email</strong></p>
-                        <p>Wedevelopard@gmail.com</p>
+                    <div class="col ms-1 text-light">
+                        <h6>PERUSAHAAN</h6><hr>
+                        <h5>CV Wirakata Studio</h5><br>
+                        <h5>CV Arcite Design</h5><br>
+                        <h5>CV Karya Kreatif</h5>
                     </div>
                     <div class="col">
-                        <h6>CONTACT US</h6>
-                        <p><strong>Address</strong></p>
-                        <p>Jl. Veteran No. 1 A, Babakan, Tangerang</p>
-                        <p><strong>Phone</strong></p>
-                        <p>082299820100</p>
-                        <p><strong>Email</strong></p>
-                        <p>Wedevelopard@gmail.com</p>
+                        <h6>CONTACT US</h6><hr class="text-light">
+                        <a href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" class="rounded border-3 shadow">
+                            <img src="../Application-Wedeveloparch/asset/icon/icon-wa.png" alt="" class="w-10">
+                        </a>
                     </div>
                     <div class="navbar-brand col d-flex align-items-center">
                         <a class="navbar-brand text-light" style="font-size: 50px" href="#"
                             ><span style="color: #006e90; font-size: 50px"><strong class="text-primary">We</strong></span
-                            ><strong>DevelopArch</strong></a
-                        >
-                    </div>
+                            ><strong>DevelopArch</strong></a>
+                    </div>  
                 </div>
-            </div>
+            </div><br>
+            <hr class="text-light">
+            <p class="text-center text-light">@Copyright | 2024</p>
         </footer>
 </body>
 </html>
