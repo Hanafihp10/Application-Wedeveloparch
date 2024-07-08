@@ -36,7 +36,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                                href="Daftar%20Proyek/Daftar_proyek.php">
+                                href='http://localhost/APPLICATION-WEDEVELOPARCH/Daftar%20Proyek/Daftar_proyek.php">
                                 Daftar Proyek</a>
                         </li>
                         <li class="nav-item">
