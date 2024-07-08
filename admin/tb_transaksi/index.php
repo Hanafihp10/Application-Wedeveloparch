@@ -1,6 +1,9 @@
 <?php
 session_start();
-require 'function.php';
+require_once 'function.php';
+
+// Pastikan koneksi ke basis data telah dibuat sebelum melakukan query
+include_once 'konek.php';
 
 // Ambil data dari tabel transaksi
 $sql = "SELECT * FROM transaksi";
