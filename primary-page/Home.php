@@ -589,7 +589,7 @@
                         <p><strong>Address</strong></p>
                         <p>Jl. Veteran No. 1 A, Babakan, Tangerang</p>
                         <p><strong>Phone</strong></p>
-                        <p>082299820100</p>
+                        <p>083862928254</p>
                         <p><strong>Email</strong></p>
                         <p>Wedeveloparch@gmail.com</p>
                     </div>
@@ -598,7 +598,7 @@
                         <p><strong>Address</strong></p>
                         <p>Jl. Veteran No. 1 A, Babakan, Tangerang</p>
                         <p><strong>Phone</strong></p>
-                        <p>082299820100</p>
+                        <p>083862928254</p>
                         <p><strong>Email</strong></p>
                         <p>Wedeveloparch@gmail.com</p>
                     </div>
