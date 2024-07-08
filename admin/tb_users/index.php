@@ -1,12 +1,4 @@
 <?php
-session_start();
-// Jika tidak bisa login maka balik ke login.php
-// jika masuk ke halaman ini melalui url, maka langsung menuju halaman login
-if (!isset($_SESSION['login'])) {
-    header('location:login.php');
-    exit;
-}
-
 // Memanggil atau membutuhkan file function.php
 require 'function.php';
 
@@ -89,7 +81,7 @@ $users = query("SELECT * FROM users ORDER BY tanggal_terdaftar DESC");
         <div class="row my-3">
             <div class="col-md">
                 <table id="data" class="table table-striped table-responsive table-hover text-center"
-                    style="width:100%">
+                    style="width:110%">
                     <thead class="table-dark">
                         <tr>
                             <th>User ID</th>
@@ -111,7 +103,7 @@ $users = query("SELECT * FROM users ORDER BY tanggal_terdaftar DESC");
                                 <td><?= $row['username']; ?></td>
                                 <td><?= $row['email']; ?></td>
                                 <td><?= $row['no_telepon']; ?></td>
-                                <td><?= $row['alamat']; ?></td>
+                                <td style="width:110px"><?= $row['alamat']; ?></td>
                                 <td><?= date('d F Y', strtotime($row['tanggal_terdaftar'])); ?></td>
                                 <td>
                                     <button class="btn btn-success btn-sm text-white detail"

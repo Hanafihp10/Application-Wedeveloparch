@@ -5,7 +5,9 @@ body{
 .navbar-brand{
     font-family: 'Righteous', cursive;
 }
-
+.container{
+    margin: 0;
+}
 .link a{
     display: inline-block;
     margin-top: 20px;

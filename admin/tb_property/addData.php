@@ -1,12 +1,4 @@
 <?php
-session_start();
-// Jika tidak bisa login maka balik ke login.php
-// jika masuk ke halaman ini melalui url, maka langsung menuju halaman login
-if (!isset($_SESSION['login'])) {
-    header('location:login.php');
-    exit;
-}
-
 // Memanggil atau membutuhkan file function.php
 require 'function.php';
 
@@ -14,17 +6,16 @@ require 'function.php';
 if (isset($_POST['simpan'])) {
     if (tambah($_POST) > 0) {
         echo "<script>
-                alert('Data user berhasil ditambahkan!');
+                alert('Data properti berhasil ditambahkan!');
                 document.location.href = 'index.php';
             </script>";
     } else {
         // Jika fungsi tambah dari 0/data tidak tersimpan, maka munculkan alert dibawah
         echo "<script>
-                alert('Data user gagal ditambahkan!');
+                alert('Data properti gagal ditambahkan!');
             </script>";
     }
 }
-
 
 ?>
 <!DOCTYPE html>
@@ -45,7 +36,7 @@ if (isset($_POST['simpan'])) {
     <!-- Own CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Tambah Data User</title>
+    <title>Tambah Data Properti</title>
 </head>
 
 <body>
@@ -82,7 +73,7 @@ if (isset($_POST['simpan'])) {
     <div class="container">
         <div class="row my-2">
             <div class="col-md">
-                <h3 class="fw-bold text-uppercase"><i class="bi bi-person-plus-fill"></i>&nbsp;User</h3>
+                <h3 class="fw-bold text-uppercase"><i class="bi bi-building"></i>&nbsp;Properti</h3>
             </div>
             <hr>
         </div>
@@ -90,28 +81,28 @@ if (isset($_POST['simpan'])) {
             <div class="col-md">
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control form-control-md w-50" id="nama" placeholder="Masukkan Nama" name="nama" autocomplete="off" required>
+                        <label for="nama_proyek" class="form-label">Nama Proyek</label>
+                        <input type="text" class="form-control form-control-md w-50" id="nama_proyek" placeholder="Masukkan Nama Proyek" name="nama_proyek" autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control form-control-md w-50" id="username" placeholder="Masukkan Username" name="username" autocomplete="off" required>
+                        <label for="lama_pengerjaan" class="form-label">Lama Pengerjaan</label>
+                        <input type="number" class="form-control form-control-md w-50" id="lama_pengerjaan" placeholder="Masukkan Lama Pengerjaan" name="lama_pengerjaan" autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control form-control-md w-50" id="password" placeholder="Masukkan Password" name="password" autocomplete="off" required>
+                        <label for="ukuran" class="form-label">Ukuran</label>
+                        <input type="text" class="form-control w-50" id="ukuran" placeholder="Masukkan Ukuran" name="ukuran" autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">E-Mail</label>
-                        <input type="email" class="form-control w-50" id="email" placeholder="Masukkan E-Mail" name="email" autocomplete="off" required>
+                        <label for="biaya" class="form-label">Biaya</label>
+                        <input type="text" class="form-control form-control-md w-50" id="biaya" placeholder="Masukkan Biaya" name="biaya" autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="no_telepon" class="form-label">No Telepon</label>
-                        <input type="text" class="form-control w-50" id="no_telepon" placeholder="Masukkan No Telepon" name="no_telepon" autocomplete="off">
+                        <label for="nama_perusahaan_terkait" class="form-label">Nama Perusahaan Terkait</label>
+                        <input type="text" class="form-control w-50" id="nama_perusahaan_terkait" placeholder="Masukkan Nama Perusahaan Terkait" name="nama_perusahaan_terkait" autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="alamat" class="form-label">Alamat</label>
-                        <textarea class="form-control w-50" id="alamat" rows="5" name="alamat" placeholder="Masukkan Alamat" autocomplete="off"></textarea>
+                        <label for="image" class="form-label">Gambar</label>
+                        <input type="file" class="form-control w-50" id="image" name="image" required>
                     </div>
                     <hr>
                     <a href="index.php" class="btn btn-secondary">Kembali</a>

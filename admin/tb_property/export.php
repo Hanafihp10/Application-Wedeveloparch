@@ -2,42 +2,44 @@
 // Memanggil atau membutuhkan file function.php
 require 'function.php';
 
-// Menampilkan semua data dari table users berdasarkan tanggal terdaftar secara Descending
-$users = query("SELECT * FROM users ORDER BY tanggal_terdaftar DESC");
+// Menampilkan semua data dari table project berdasarkan tanggal terdaftar secara Descending
+$projects = query("SELECT * FROM project ORDER BY tanggal_terdaftar DESC");
 
 // Membuat nama file
-$filename = "data users-" . date('Ymd') . ".xls";
+$filename = "data proyek-" . date('Ymd') . ".xls";
 
-// Kodingam untuk export ke excel
+// Kodingan untuk export ke excel
 header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=Data Users.xls");
+header("Content-Disposition: attachment; filename=Data Proyek.xls");
 
 ?>
 <table class="text-center" border="1">
     <thead class="text-center">
         <tr>
             <th>No.</th>
-            <th>User ID</th>
-            <th>Nama</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>No Telepon</th>
-            <th>Alamat</th>
+            <th>Property ID</th>
+            <th>Nama Proyek</th>
+            <th>Lama Pengerjaan</th>
+            <th>Ukuran</th>
+            <th>Biaya</th>
             <th>Tanggal Terdaftar</th>
+            <th>Nama Perusahaan Terkait</th>
+            <th>Image</th>
         </tr>
     </thead>
     <tbody class="text-center">
         <?php $no = 1; ?>
-        <?php foreach ($users as $row) : ?>
+        <?php foreach ($projects as $row) : ?>
             <tr>
                 <td><?= $no++; ?></td>
-                <td><?= $row['user_id']; ?></td>
-                <td><?= $row['nama']; ?></td>
-                <td><?= $row['username']; ?></td>
-                <td><?= $row['email']; ?></td>
-                <td><?= $row['no_telepon']; ?></td>
-                <td><?= $row['alamat']; ?></td>
+                <td><?= $row['property_id']; ?></td>
+                <td><?= $row['nama_proyek']; ?></td>
+                <td><?= $row['lama_pengerjaan']; ?></td>
+                <td><?= $row['ukuran']; ?></td>
+                <td><?= $row['biaya']; ?></td>
                 <td><?= date('d F Y', strtotime($row['tanggal_terdaftar'])); ?></td>
+                <td><?= $row['nama_perusahaan_terkait']; ?></td>
+                <td><?= $row['image']; ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

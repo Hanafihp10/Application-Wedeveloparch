@@ -26,14 +26,18 @@ function tambah($data)
 {
     global $koneksi;
 
-    $nama = htmlspecialchars($data['nama']);
-    $username = htmlspecialchars($data['username']);
-    $password = password_hash($data['password'], PASSWORD_DEFAULT);
-    $email = htmlspecialchars($data['email']);
-    $no_telepon = $data['no_telepon'];
-    $alamat = htmlspecialchars($data['alamat']);
+    $nama_proyek = htmlspecialchars($data['nama_proyek']);
+    $lama_pengerjaan = $data['lama_pengerjaan'];
+    $ukuran = htmlspecialchars($data['ukuran']);
+    $biaya = $data['biaya'];
+    $nama_perusahaan_terkait = htmlspecialchars($data['nama_perusahaan_terkait']);
+    $image = upload();
 
-    $sql = "INSERT INTO users (nama, username, password, email, no_telepon, alamat) VALUES ('$nama', '$username', '$password', '$email', '$no_telepon', '$alamat')";
+    if (!$image) {
+        return false;
+    }
+
+    $sql = "INSERT INTO project (nama_proyek, lama_pengerjaan, ukuran, biaya, nama_perusahaan_terkait, image) VALUES ('$nama_proyek', '$lama_pengerjaan', '$ukuran', '$biaya', '$nama_perusahaan_terkait', '$image')";
 
     mysqli_query($koneksi, $sql);
 
@@ -41,11 +45,11 @@ function tambah($data)
 }
 
 // Membuat fungsi hapus
-function hapus($user_id)
+function hapus($property_id)
 {
     global $koneksi;
 
-    mysqli_query($koneksi, "DELETE FROM users WHERE user_id = $user_id");
+    mysqli_query($koneksi, "DELETE FROM project WHERE property_id = $property_id");
     return mysqli_affected_rows($koneksi);
 }
 
@@ -54,15 +58,22 @@ function ubah($data)
 {
     global $koneksi;
 
-    $user_id = $data['user_id'];
-    $nama = htmlspecialchars($data['nama']);
-    $username = htmlspecialchars($data['username']);
-    $password = password_hash($data['password'], PASSWORD_DEFAULT);
-    $email = htmlspecialchars($data['email']);
-    $no_telepon = $data['no_telepon'];
-    $alamat = htmlspecialchars($data['alamat']);
+    $property_id = $data['property_id'];
+    $nama_proyek = htmlspecialchars($data['nama_proyek']);
+    $lama_pengerjaan = $data['lama_pengerjaan'];
+    $ukuran = htmlspecialchars($data['ukuran']);
+    $biaya = $data['biaya'];
+    $nama_perusahaan_terkait = htmlspecialchars($data['nama_perusahaan_terkait']);
 
-    $sql = "UPDATE users SET nama = '$nama', username = '$username', password = '$password', email = '$email', no_telepon = '$no_telepon', alamat = '$alamat' WHERE user_id = $user_id";
+    $gambarLama = $data['gambarLama'];
+
+    if ($_FILES['image']['error'] === 4) {
+        $image = $gambarLama;
+    } else {
+        $image = upload();
+    }
+
+    $sql = "UPDATE project SET nama_proyek = '$nama_proyek', lama_pengerjaan = '$lama_pengerjaan', ukuran = '$ukuran', biaya = '$biaya', nama_perusahaan_terkait = '$nama_perusahaan_terkait', image = '$image' WHERE property_id = $property_id";
 
     mysqli_query($koneksi, $sql);
 
@@ -73,10 +84,10 @@ function ubah($data)
 function upload()
 {
     // Syarat
-    $namaFile = $_FILES['gambar']['name'];
-    $ukuranFile = $_FILES['gambar']['size'];
-    $error = $_FILES['gambar']['error'];
-    $tmpName = $_FILES['gambar']['tmp_name'];
+    $namaFile = $_FILES['image']['name'];
+    $ukuranFile = $_FILES['image']['size'];
+    $error = $_FILES['image']['error'];
+    $tmpName = $_FILES['image']['tmp_name'];
 
     // Jika tidak mengupload gambar atau tidak memenuhi persyaratan diatas maka akan menampilkan alert dibawah
     if ($error === 4) {

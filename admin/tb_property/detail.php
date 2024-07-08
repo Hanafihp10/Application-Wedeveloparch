@@ -2,47 +2,51 @@
 // Memanggil atau membutuhkan file function.php
 require 'function.php';
 
-// Jika dataSiswa diklik maka
-if (isset($_POST['dataUser'])) {
+// Jika dataProperty diklik maka
+if (isset($_POST['dataProperty'])) {
     $output = '';
 
-    // mengambil data siswa dari nis yang berasal dari dataSiswa
-    $sql = "SELECT * FROM users WHERE user_id = '" . $_POST['dataUser'] . "'";
+    // mengambil data properti dari property_id yang berasal dari dataProperty
+    $sql = "SELECT * FROM project WHERE property_id = '" . $_POST['dataProperty'] . "'";
     $result = mysqli_query($koneksi, $sql);
 
     $output .= '<div class="table-responsive">
                         <table class="table table-bordered">';
     foreach ($result as $row) {
         $output .= '<tr align="center">
-                            <td colspan="2"><img src="../../asset/icon/profile.jpeg" alt="profile" width="50%"></td>
+                            <td colspan="2"><img src="img/' . $row['image'] . '" alt="property" width="50%"></td>
                         </tr>
                         <tr>
-                            <th width="40%">User ID</th>
-                            <td width="60%">' . $row['user_id'] . '</td>
+                            <th width="40%">Property ID</th>
+                            <td width="60%">' . $row['property_id'] . '</td>
                         </tr>
                         <tr>
-                            <th width="40%">Nama</th>
-                            <td width="60%">' . $row['nama'] . '</td>
+                            <th width="40%">Nama Proyek</th>
+                            <td width="60%">' . $row['nama_proyek'] . '</td>
                         </tr>
                         <tr>
-                            <th width="40%">Username</th>
-                            <td width="60%">' . $row['username'] . '</td>
+                            <th width="40%">Lama Pengerjaan</th>
+                            <td width="60%">' . $row['lama_pengerjaan'] . '</td>
                         </tr>
                         <tr>
-                            <th width="40%">Email</th>
-                            <td width="60%">' . $row['email'] . '</td>
+                            <th width="40%">Ukuran</th>
+                            <td width="60%">' . $row['ukuran'] . '</td>
                         </tr>
                         <tr>
-                            <th width="40%">No Telepon</th>
-                            <td width="60%">' . $row['no_telepon'] . '</td>
-                        </tr>
-                        <tr>
-                            <th width="40%">Alamat</th>
-                            <td width="60%">' . $row['alamat'] . '</td>
+                            <th width="40%">Biaya</th>
+                            <td width="60%">Rp ' . number_format($row['biaya'], 2, ',', '.') . '</td>
                         </tr>
                         <tr>
                             <th width="40%">Tanggal Terdaftar</th>
                             <td width="60%">' . date('d M Y', strtotime($row['tanggal_terdaftar'])) . '</td>
+                        </tr>
+                        <tr>
+                            <th width="40%">Nama Perusahaan Terkait</th>
+                            <td width="60%">' . $row['nama_perusahaan_terkait'] . '</td>
+                        </tr>
+                        <tr>
+                            <th width="40%">Gambar</th>
+                            <td width="60%"><img src="' . $row['image'] . '" alt="Gambar Properti" width="50%"></td>
                         </tr>
                         ';
     }

@@ -10,23 +10,23 @@ if (!isset($_SESSION['login'])) {
 // Memanggil atau membutuhkan file function.php
 require 'function.php';
 
-// Mengambil data dari user_id dengan fungsi get
-$user_id = $_GET['user_id'];
+// Mengambil data dari property_id dengan fungsi get
+$property_id = $_GET['property_id'];
 
-// Mengambil data dari table users dari user_id yang tidak sama dengan 0
-$user = query("SELECT * FROM users WHERE user_id = $user_id")[0];
+// Mengambil data dari table project dari property_id yang tidak sama dengan 0
+$property = query("SELECT * FROM project WHERE property_id = $property_id")[0];
 
 // Jika fungsi ubah lebih dari 0/data terubah, maka munculkan alert dibawah
 if (isset($_POST['ubah'])) {
     if (ubah($_POST) > 0) {
         echo "<script>
-                alert('Data user berhasil diubah!');
+                alert('Data proyek berhasil diubah!');
                 document.location.href = 'index.php';
             </script>";
     } else {
         // Jika fungsi ubah dibawah dari 0/data tidak terubah, maka munculkan alert dibawah
         echo "<script>
-                alert('Data user gagal diubah!');
+                alert('Data proyek gagal diubah!');
             </script>";
     }
 }
@@ -52,7 +52,7 @@ if (isset($_POST['ubah'])) {
     <!-- Own CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Tambah Data | PHP Native | CRUD</title>
+    <title>Ubah Data Proyek | PHP Native | CRUD</title>
 </head>
 
 <body>
@@ -90,38 +90,43 @@ if (isset($_POST['ubah'])) {
     <div class="container">
         <div class="row my-2">
             <div class="col-md">
-                <h3 class="fw-bold text-uppercase"><i class="bi bi-pencil-square"></i>&nbsp;Ubah Data User</h3>
+                <h3 class="fw-bold text-uppercase"><i class="bi bi-pencil-square"></i>&nbsp;Ubah Data Proyek</h3>
             </div>
             <hr>
         </div>
         <div class="row my-2">
             <div class="col-md">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="user_id" value="<?= $user['user_id']; ?>">
+                    <input type="hidden" name="property_id" value="<?= $property['property_id']; ?>">
                     <div class="mb-3">
-                        <label for="nama" class="form-label">Nama</label>
-                        <input type="text" class="form-control w-50" id="nama" value="<?= $user['nama']; ?>" name="nama"
+                        <label for="nama_proyek" class="form-label">Nama Proyek</label>
+                        <input type="text" class="form-control w-50" id="nama_proyek" value="<?= $property['nama_proyek']; ?>" name="nama_proyek"
                             autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control w-50" id="username" value="<?= $user['username']; ?>"
-                            name="username" autocomplete="off" required>
+                        <label for="lama_pengerjaan" class="form-label">Lama Pengerjaan</label>
+                        <input type="number" class="form-control w-50" id="lama_pengerjaan" value="<?= $property['lama_pengerjaan']; ?>" name="lama_pengerjaan"
+                            autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">E-Mail</label>
-                        <input type="email" class="form-control w-50" id="email" value="<?= $user['email']; ?>"
-                            name="email" autocomplete="off" required>
+                        <label for="ukuran" class="form-label">Ukuran</label>
+                        <input type="text" class="form-control w-50" id="ukuran" value="<?= $property['ukuran']; ?>" name="ukuran"
+                            autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="no_telepon" class="form-label">No Telepon</label>
-                        <input type="text" class="form-control w-50" id="no_telepon" value="<?= $user['no_telepon']; ?>"
-                            name="no_telepon" autocomplete="off">
+                        <label for="biaya" class="form-label">Biaya</label>
+                        <input type="text" class="form-control w-50" id="biaya" value="<?= $property['biaya']; ?>" name="biaya"
+                            autocomplete="off" required>
                     </div>
                     <div class="mb-3">
-                        <label for="alamat" class="form-label">Alamat</label>
-                        <textarea class="form-control w-50" id="alamat" rows="5" name="alamat"
-                            autocomplete="off"><?= $user['alamat']; ?></textarea>
+                        <label for="nama_perusahaan_terkait" class="form-label">Nama Perusahaan Terkait</label>
+                        <input type="text" class="form-control w-50" id="nama_perusahaan_terkait" value="<?= $property['nama_perusahaan_terkait']; ?>" name="nama_perusahaan_terkait"
+                            autocomplete="off" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Gambar <i>(Saat ini)</i></label> <br>
+                        <img src="img/<?= $property['image']; ?>" width="50%" style="margin-bottom: 10px;">
+                        <input class="form-control form-control-sm w-50" id="image" name="image" type="file">
                     </div>
                     <hr>
                     <a href="index.php" class="btn btn-secondary">Kembali</a>

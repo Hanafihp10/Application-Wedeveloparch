@@ -8,19 +8,19 @@ if (!isset($_SESSION['login'])) {
 // Memanggil atau membutuhkan file function.php
 require 'function.php';
 
-// Mengambil data dari user_id dengan fungsi get
-$user_id = $_GET['user_id'];
+// Mengambil data dari property_id dengan fungsi get
+$property_id = $_GET['property_id'];
 
 // Jika fungsi hapus lebih dari 0/data terhapus, maka munculkan alert dibawah
-if (hapus($user_id) > 0) {
+if (hapus($property_id) > 0) {
     echo "<script>
-                alert('Data user berhasil dihapus!');
+                alert('Data properti berhasil dihapus!');
                 document.location.href = 'index.php';
             </script>";
 } else {
     // Jika fungsi hapus dibawah dari 0/data tidak terhapus, maka munculkan alert dibawah
     echo "<script>
-            alert('Data user gagal dihapus!');
+            alert('Data properti gagal dihapus!');
             document.location.href = 'index.php';
         </script>";
 }
