@@ -3,7 +3,7 @@ session_start();
 include('../admin/db-connect.php'); // Menghubungkan ke database
 
 $registration_success = false;
-$duplicate_error = "";
+$duplicate_error = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST['nama'];
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } catch (mysqli_sql_exception $e) {
             if ($stmt->errno == 1062) {
-                $duplicate_error = "Username atau email sudah digunakan!";
+                $duplicate_error = true;
             } else {
                 echo "Terjadi kesalahan: " . $stmt->error;
             }
@@ -57,7 +57,7 @@ $config->close();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 </head>
 <body class="img js-fullheight" style="background-image: url(../log/images/bg.jpg);">
-<section class="ftco-section">
+<section class="ftco-section ">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
@@ -95,11 +95,6 @@ $config->close();
 							</a>
 						</div>
                     </form>
-                    <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-                    <div class="social d-flex justify-content-center">
-                        <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new"/></a>
-                        <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span><img width="48" height="48" src="https://img.icons8.com/papercut/60/google-logo.png" alt="google-logo"/></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -112,8 +107,7 @@ $config->close();
 <script src="../log/js/main.js"></script>
 <script>
     $(document).ready(function() {
-        // Load the content of alert.html into the placeholder
-        $("#modal-placeholder").load("alert.html", function(response, status, xhr) {
+        $("#modal-placeholder").load("alert.html","alert2.html", function(response, status, xhr) {
             if (status == "error") {
                 console.log("Error loading modal content: " + xhr.status + " " + xhr.statusText);
             } else {
@@ -121,8 +115,8 @@ $config->close();
                 <?php if ($registration_success) { ?>
                     $('#myModal').modal('show');
                 <?php } ?>
-                <?php if (!empty($duplicate_error)) { ?>
-                    alert("<?php echo $duplicate_error; ?>");
+                <?php if ($duplicate_error) { ?>
+                    $('#myModal2').modal('show');
                 <?php } ?>
             }
         });

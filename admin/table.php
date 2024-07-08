@@ -11,10 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="../asset/style/admin.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="../admin/admin.php">Dashboard Admin</a>
         <!-- Sidebar Toggle-->
@@ -51,169 +52,159 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Addons</div>
-                        <a class="nav-link" href="../admin/table.php">
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tables
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="../admin/tb_users/indes">Users</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">Tables</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Tables</li>
-                    </ol>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Data Users
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>User ID</th>
-                                        <th>Nama</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <th>No Telepon</th>
-                                        <th>Alamat</th>
-                                        <th>Tanggal Terdaftar</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    include ('../admin/db-connect.php');
-                                    $sql = "SELECT * FROM users";
-                                    $result = $config->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            echo "<tr>";
-                                            echo "<td>" . $row['user_id'] . "</td>";
-                                            echo "<td>" . $row['nama'] . "</td>";
-                                            echo "<td>" . $row['username'] . "</td>";
-                                            echo "<td>" . $row['email'] . "</td>";
-                                            echo "<td>" . $row['no_telepon'] . "</td>";
-                                            echo "<td>" . $row['alamat'] . "</td>";
-                                            echo "<td>" . $row['tanggal_terdaftar'] . "</td>";
-                                            echo "</tr>";
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='7'>No records found</td></tr>";
-                                    }
-                                    $config->close();
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Tables</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Tables</li>
+                </ol>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Data Users
                     </div>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Data Admin
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple2">
+                    <div class="card-body">
+                        <table id="datatablesSimple">
                             <thead>
-                                    <tr>
-                                        <th>Admin ID</th>
-                                        <th>Nama</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <th>No Telepon</th>
-                                        <th>Role</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>Nama</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>No Telepon</th>
+                                    <th>Alamat</th>
+                                    <th>Tanggal Terdaftar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <?php
-                                    include ('../admin/db-connect.php');
-                                    $sql = "SELECT * FROM admin";
-                                    $result = $config->query($sql);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            echo "<tr>";
-                                            echo "<td>" . $row['admin_id'] . "</td>";
-                                            echo "<td>" . $row['nama'] . "</td>";
-                                            echo "<td>" . $row['username'] . "</td>";
-                                            echo "<td>" . $row['email'] . "</td>";
-                                            echo "<td>" . $row['no_telepon'] . "</td>";
-                                            echo "<td>" . $row['role'] . "</td>";
-                                            echo "</tr>";
-                                        }
-                                    } else {
-                                        echo "<tr><td colspan='6'>No records found</td></tr>";
+                                include ('../admin/db-connect.php');
+                                $sql = "SELECT * FROM users";
+                                $result = $config->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row['user_id'] . "</td>";
+                                        echo "<td>" . $row['nama'] . "</td>";
+                                        echo "<td>" . $row['username'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['no_telepon'] . "</td>";
+                                        echo "<td>" . $row['alamat'] . "</td>";
+                                        echo "<td>" . $row['tanggal_terdaftar'] . "</td>";
+                                        echo "</tr>";
                                     }
-                                    $config->close();
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Data Admin
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple2">
-                            <thead>
-                                    <tr>
-                                        <th>Admin ID</th>
-                                        <th>Nama</th>
-                                        <th>Username</th>
-                                        <th>Email</th>
-                                        <th>No Telepon</th>
-                                        <th>Role</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Data Property
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimple2">
-                            <thead>
-                                    <tr>
-                                        <th>Property ID</th>
-                                        <th>User_Id</th>
-                                        <th>Nama_Properti</th>
-                                        <th>Deskripsi</th>
-                                        <th>Harga</th>
-                                        <th>Lokasi</th>
-                                        <th>tanggal_terdaftar</th>
-                                        <th>status</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                                } else {
+                                    echo "<tr><td colspan='7'>No records found</td></tr>";
+                                }
+                                $config->close();
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </main>
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Data Admin
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple2">
+                            <thead>
+                                <tr>
+                                    <th>Admin ID</th>
+                                    <th>Nama</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>No Telepon</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                include ('../admin/db-connect.php');
+                                $sql = "SELECT * FROM admin";
+                                $result = $config->query($sql);
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row['admin_id'] . "</td>";
+                                        echo "<td>" . $row['nama'] . "</td>";
+                                        echo "<td>" . $row['username'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['no_telepon'] . "</td>";
+                                        echo "<td>" . $row['role'] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                } else {
+                                    echo "<tr><td colspan='6'>No records found</td></tr>";
+                                }
+                                $config->close();
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </footer>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-                crossorigin="anonymous"></script>
-            <script src="../admin/asset/script/scripts.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-                crossorigin="anonymous"></script>
-            <script src="../admin/asset/script/datatables.js"></script>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        Data Admin
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple3">
+                            <thead>
+                                <tr>
+                                    <th>Admin ID</th>
+                                    <th>Nama</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>No Telepon</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+        <script src="../admin/asset/script/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+            crossorigin="anonymous"></script>
+        <script src="../admin/asset/script/datatables.js"></script>
 </body>
+
 </html>
