@@ -18,8 +18,8 @@
     <header>
         <nav class="navbar navbar-expand-lg shadow bg-body rounded">
             <div class="container-fluid">
-                <img src="asset/icon/wedev-logo.png" alt=""
-                    width="60" height="60" />
+                <a href="http://localhost/Application-Wedeveloparch/dasboard.php"><img src="../asset/icon/wedev-logo.png" alt=""
+                width="60" height="60"/></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
@@ -36,7 +36,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                                href="Daftar%20Proyek/Daftar_proyek.php">
+                                href="../Daftar Proyek/Daftar_proyek.php">
                                 Daftar Proyek</a>
                         </li>
                         <li class="nav-item">

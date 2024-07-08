@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg shadow bg-body rounded">
             <div class="container-fluid">
-                <img src="http://localhost/FP-PEMWEB/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60" height="60" />
+                <img src="http://localhost/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60" height="60" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
