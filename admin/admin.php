@@ -62,8 +62,6 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="../admin/tb_users/index.php">Users</a>
                                 <a class="nav-link" href="../admin/tb_property/index.php">Proyek</a>
-                                <a class="nav-link" href="../admin/tb_users/index.php">Users</a>
-                                <a class="nav-link" href="../admin/tb_users/index.php">Users</a>
                                 <a class="nav-link" href="http://localhost/Application-Wedeveloparch/admin/tb_transaksi/index.php">Transaksi</a>
                             </nav>
                         </div>

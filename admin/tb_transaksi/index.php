@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'konek.php';
+require 'function.php';
 
 // Ambil data dari tabel transaksi
 $sql = "SELECT * FROM transaksi";
