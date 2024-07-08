@@ -165,13 +165,13 @@ $projects = query("SELECT * FROM project ORDER BY tanggal_terdaftar DESC");
 
             // Fungsi Detail
             $('.detail').click(function () {
-                var dataProject = $(this).attr("data-id");
+                var dataProperty = $(this).attr("data-id");
                 $.ajax({
                     url: "detail.php",
                     method: "post",
                     data: {
-                        dataProject,
-                        dataProject
+                        dataProperty,
+                        dataProperty
                     },
                     success: function (data) {
                         $('#detail-user').html(data);

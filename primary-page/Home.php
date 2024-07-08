@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../asset/style/products.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../asset/style/daftar_proyek.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -18,26 +21,30 @@
     <header>
         <nav class="navbar navbar-expand-lg shadow bg-body rounded">
             <div class="container-fluid">
-                <img src="asset/icon/wedev-logo.png" alt=""
-                    width="60" height="60" />
+                <img src="http://localhost/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60"
+                    height="60" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">Layanan</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#desain-jasa">Desain</a></li>
-                                <li><a class="dropdown-item" href="#desain-jasa">Jasa</a></li>
+                                <li><a class="dropdown-item"
+                                        href="http://localhost/APPLICATION-WEDEVELOPARCH/primary-page/home.php">Desain</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="http://localhost/APPLICATION-WEDEVELOPARCH/primary-page/home.php">Jasa</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page"
-                                href='http://localhost/APPLICATION-WEDEVELOPARCH/Daftar%20Proyek/Daftar_proyek.php">
-                                Daftar Proyek</a>
+                                href="http://localhost/Application-Wedeveloparch/pages/Sign-In.php"> Daftar Proyek</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"
@@ -45,8 +52,21 @@
                                 tabindex="-1" aria-disabled="true">Contact</a>
                         </li>
                     </ul>
-                    <img href="#" src="https://img.icons8.com/?size=100&id=c8SsrDOfQgn3&format=png&color=000000" alt=""
-                        width="60">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle me-3" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="profile-pic">
+                                    <img src="../asset/icon/profile2.gif" alt="Profile Picture" class="m-0">
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu me-4" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item"
+                                        href="http://localhost/APPLICATION-WEDEVELOPARCH/pages/Sign-In.php"><i
+                                            class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -999,25 +1019,30 @@
                 function filterItems() {
                     const selectedRegion = regionFilter.value;
                     const selectedService = serviceFilter.value;
+                    const items = document.querySelectorAll('.item');
 
-                    items.forEach(item => {
-                        const itemRegion = item.getAttribute('data-region');
-                        const itemService = item.getAttribute('data-service');
+                    function filterItems() {
+                        const selectedRegion = regionFilter.value;
+                        const selectedService = serviceFilter.value;
 
-                        if ((selectedRegion === 'all' || itemRegion === selectedRegion) &&
-                            (selectedService === 'all' || itemService === selectedService)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                }
+                        items.forEach(item => {
+                            const itemRegion = item.getAttribute('data-region');
+                            const itemService = item.getAttribute('data-service');
 
-                regionFilter.addEventListener('change', filterItems);
-                serviceFilter.addEventListener('change', filterItems);
+                            if ((selectedRegion === 'all' || itemRegion === selectedRegion) &&
+                                (selectedService === 'all' || itemService === selectedService)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }
 
-                // Initial filter to show all items
-                filterItems();
+                    regionFilter.addEventListener('change', filterItems);
+                    serviceFilter.addEventListener('change', filterItems);
+
+                    // Initial filter to show all items
+                    filterItems();
             </script>
         </div>
     </main><br><br>
@@ -1051,7 +1076,7 @@
         <p class="text-center text-light">@Copyright | 2024</p>
     </footer>
     <script src="../asset/script/script.js"></script>
-    
+
 </body>
 
 </html>
