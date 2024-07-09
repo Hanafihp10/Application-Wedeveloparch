@@ -29,7 +29,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/Daftar%20Proyek/Daftar_proyek.php"> Daftar Proyek</a>
+                            <a class="nav-link" aria-current="page" href="http://localhost/Application-Wedeveloparch/Daftar%20Proyek/Daftar_proyek.php"> Daftar Proyek</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Contact</a>
@@ -136,117 +136,109 @@
                 </div>
             </div>
         </section>
-        <hr />
+        <hr /><br>
 
-        <section class="container-fluid m-0 p-0"><br><br>
-            <h3 class="text-center"><strong>Proyek Selesai</strong></h3><br>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner position-relative">
-                    <div class="carousel-item active">
-                        <img src="https://hensleyhomes.com/wp-content/uploads/2022/04/IMG_6215-1-1536x1040.jpg"
-                            class="d-block w-100" style="height: 90vh;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            class="d-block w-100" style="height: 90vh;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            class="d-block w-100" style="height: 90vh;">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>  
-        </section><br><br><hr>
-
-        <!-- Form Ulasan -->
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 shadow ms-3 me-3 rounded-3"><br>
-                    <h2 class="text-center mb-4">Berikan Ulasan</h2>
-                    <form id="reviewForm" class="mb-4" action="submit_review.php" method="POST" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nama:</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="projectType" class="form-label">Kategori Proyek:</label>
-                            <select class="form-select" id="projectType" name="project_type" required>
-                                <option value="Pilih">Pilih</option>
-                                <option value="Desain">Desain</option>
-                                <option value="Jasa">Jasa</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="image" class="form-label">Upload Gambar:</label>
-                            <input type="file" class="form-control w-100" id="image" name="image" accept="image/*" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="review" class="form-label">Review:</label>
-                            <textarea class="form-control" id="review" name="review" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Submit</button><br>
-                    </form><br>
-                </div>
+        <section>
+        <?php include('../Application-Wedeveloparch/admin/tb_ulasan/config/db.php'); ?>
+        <div class="container">
+        <h1 class="text-center">Tambah Ulasan</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label>Nama:</label>
+                <input type="text" name="nama" class="form-control" required>
             </div>
-        </div><br><hr><br>
-        <div id="reviews" class="ms-5 me-5 rounded-5 shadow bg-dark text-light"><br>
-            <h2 class="text-center">Semua Ulasan</h2><br>
-              <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner" id="reviewList" >
-                      <?php
-                        include 'db.php';
-                        $sql = "SELECT * FROM review ORDER BY created_at DESC";
-                        $result = $conn->query($sql);
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Komentar:</label>
+                <textarea name="komentar" class="form-control" required></textarea>
+            </div>
+            <br>
+            <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+        </form>
 
-                          if ($result->num_rows > 0) {
-                              $first = true;
-                              while($row = $result->fetch_assoc()) {
-                                  echo '<div class="carousel-item' . ($first ? ' active' : '') . '">';
-                                  echo '<div class="d-flex justify-content-center">';
-                                  echo '<div class="review text-center">';
-                                  echo '<strong>' . htmlspecialchars($row['name']) . '</strong><br><br>';
-                                  echo '<small>' . htmlspecialchars($row['project_type']) . '</small><br><br>';                                    echo '<img src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" alt="Project Image" style="max-height: 100px;"><br>';
-                                  echo '<p>' . htmlspecialchars($row['review']) . '</p><br><br>';
-                                  echo '</div>';
-                                  echo '</div>';
-                                  echo '</div>';
-                                  $first = false;
-                              }
-                          } else {
-                              echo "0 results";
-                          }
-                          $conn->close();
-                          ?>
-                  </div>
-                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselReviews" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>                      </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselReviews" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                  </div><br><br>
-              </div>
-          </div>
-        </div><br><hr><br>
+        <?php
+        if (isset($_POST['submit'])) {
+            $nama = $_POST['nama'];
+            $email = $_POST['email'];
+            $komentar = $_POST['komentar'];
+
+            $sql = "INSERT INTO ulasan (nama, email, komentar) VALUES ('$nama', '$email', '$komentar')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "<div class='alert alert-success'>Ulasan berhasil ditambahkan</div>";
+            } else {
+                echo "<div class='alert alert-danger'>Error: " . $sql . "<br>" . $conn->error . "</div>";
+            }
+        }
+        ?>
+    </div>
+
+    <br><hr>
+
+    <div class="container">
+        <h1 class="text-center">Ulasan Pengguna</h1>
+        <div id="ulasanCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner text-center">
+                <?php
+                // Jika ada ulasan baru ditambahkan, tampilkan ulasan terbaru
+                if (isset($_POST['submit'])) {
+                    $result = $conn->query("SELECT nama, email, komentar, tanggal FROM ulasan ORDER BY tanggal DESC LIMIT 5");
+                } else {
+                    $result = $conn->query("SELECT nama, email, komentar, tanggal FROM ulasan ORDER BY tanggal DESC");
+                }
+
+                $isActive = true;
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $activeClass = $isActive ? 'active' : '';
+                        echo "<div class='carousel-item $activeClass'>
+                                <div class='card'>
+                                    <div class='card-body'>
+                                        <h5 class='card-title'>{$row['nama']}</h5>
+                                        <h6 class='card-subtitle mb-2 text-muted'>{$row['email']}</h6>
+                                        <p class='card-text'>{$row['komentar']}</p>
+                                        <p class='card-text'><small class='text-muted'>{$row['tanggal']}</small></p>
+                                    </div>
+                                </div>
+                              </div>";
+                        $isActive = false;
+                    }
+                } else {
+                    echo "<div class='carousel-item active'>
+                            <div class='card'>
+                                <div class='card-body'>
+                                    <h5 class='card-title'>Belum ada ulasan</h5>
+                                </div>
+                            </div>
+                          </div>";
+                }
+                ?>
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#ulasanCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                
+            </a>
+            <a class="carousel-control-next" href="#ulasanCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                
+            </a>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                // Inisialisasi carousel dengan interval 5 detik
+                $('#ulasanCarousel').carousel({
+                    interval: 50
+                });
+            });
+        </script>
+    </div>
+    </section><br><hr><br>
 
 
         <footer class="bg-dark">

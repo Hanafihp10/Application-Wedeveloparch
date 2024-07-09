@@ -27,7 +27,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="http://localhost/Application-Wedeveloparch/pages/Sign-In.php"> Daftar Proyek</a>
+                <a class="nav-link" aria-current="page">Daftar Proyek</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://api.whatsapp.com/send/?phone=62083862928254&text&type=phone_number&app_absent=0" tabindex="-1" aria-disabled="true">Contact</a>
