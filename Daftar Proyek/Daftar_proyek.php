@@ -15,13 +15,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 </head>
 
 <body class="body">
   <header>
     <nav class="navbar navbar-expand-lg shadow bg-body rounded">
       <div class="container-fluid">
-        <img src="http://localhost/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60" height="60" />
+        <a href="http://localhost/APPLICATION-WEDEVELOPARCH/dasboard.php"><img
+            src="http://localhost/Application-Wedeveloparch/asset/icon/wedev-logo.png" alt="" width="60"
+            height="60" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -77,6 +82,18 @@
           href="http://localhost/FP-PEMWEB/Application-Wedeveloparch/primary-page/home.php">Desain</button>
       </div>
 
+      <div class="container">
+        <div class="row height d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <div class="form">
+              <i class="fa fa-search"></i>
+              <input type="text" class="form-control form-input" placeholder="Search anything...">
+              <span class="left-pan"><i class="fa fa-microphone"></i><img src="http://localhost/APPLICATION-WEDEVELOPARCH/asset/icon/mic.gif" width="25px" alt="mic"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="items"><br>
         <?php
         // Koneksi ke database
@@ -86,8 +103,13 @@
           die("Connection failed: " . mysqli_connect_error());
         }
 
-        // Query untuk menampilkan data proyek
-        $sql = "SELECT * FROM project";
+        // Mengatur halaman saat ini
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+        $limit = 3; // Jumlah data per halaman
+        $offset = ($page - 1) * $limit;
+
+        // Query untuk menampilkan data proyek dengan limit dan offset
+        $sql = "SELECT * FROM project LIMIT $limit OFFSET $offset";
         $result = mysqli_query($koneksi, $sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -100,7 +122,7 @@
                     <div class="col-sm-6">
                       <div class="card border-0">
                         <div class="card-body">
-                        <img src="../admin/tb_project/img/' . $row['image'] . '" alt="property" width="80%">
+                        <img src="../admin/tb_project/img/' . $row['image'] . '" alt="property" width="65%">
                         </div>
                       </div>
                     </div>
@@ -127,23 +149,34 @@
           echo "Tidak ada data proyek.";
         }
 
+        // Menampilkan tombol pagination
+        $total_records = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM project"));
+        $total_pages = ceil($total_records / $limit);
+        echo "<nav aria-label='Page navigation example '>
+          <ul class='pagination justify-content-center mt-5'>";
+        if ($page > 1) {
+          echo "<li class='page-item'><a class='page-link' href='?page=" . ($page - 1) . "' tabindex='-1'>Previous</a></li>";
+        } else {
+          echo "<li class='page-item disabled'><a class='page-link' href='#' tabindex='-1'>Previous</a></li>";
+        }
+        for ($i = 1; $i <= $total_pages; $i++) {
+          if ($i == $page) {
+            echo "<li class='page-item active'><a class='page-link' href='?page=$i'>$i</a></li>";
+          } else {
+            echo "<li class='page-item'><a class='page-link' href='?page=$i'>$i</a></li>";
+          }
+        }
+        if ($page < $total_pages) {
+          echo "<li class='page-item'><a class='page-link' href='?page=" . ($page + 1) . "'>Next</a></li>";
+        } else {
+          echo "<li class='page-item disabled'><a class='page-link' href='#'>Next</a></li>";
+        }
+        echo "</ul>
+        </nav>";
+
         mysqli_close($koneksi);
         ?>
       </div><br><br>
-
-      <nav aria-label="Page navigation example" class="mb-4">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
 
       <footer class="bg-dark">
         <div class="container-2">
@@ -185,6 +218,27 @@
           });
         });
       </script>
+            <script>
+          // Ambil elemen input pencarian
+const searchInput = document.querySelector('.form-input');
+
+// Ambil semua item proyek
+const items = document.querySelectorAll('.item');
+
+// Tambahkan event listener untuk input
+searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    items.forEach(item => {
+        const projectName = item.querySelector('.card-title').innerText.toLowerCase();
+        if (projectName.includes(searchTerm)) {
+            item.style.display = 'block'; // Tampilkan item jika cocok dengan pencarian
+        } else {
+            item.style.display = 'none'; // Sembunyikan item jika tidak cocok
+        }
+    });
+});
+        </script>
 </body>
 
 </html>
